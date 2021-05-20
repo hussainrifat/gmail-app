@@ -10,25 +10,26 @@ class gmailController extends Controller
     public function messages()
     {
         $messages = LaravelGmail::message()->subject('test')->unread()->preload()->all();
-        $count= strlen($messages);
-        
+        $count = strlen($messages);
+
         foreach ($messages as $message) {
             // $body = $message->getHtmlBody();
             $subject = $message->getSubject();
             $body = $message->getPlainTextBody();
-
         }
         // return view('msg');
         // dd($messages);
         // dd($messages);
-        return view('msg')->with (compact('messages','body','count'));
-
+        return view('inbox')->with(compact('messages', 'body', 'count'));
     }
 
-    public function detailsMail($id){
+    public function detailsMail($id)
+    {
 
-        $messages = LaravelGmail::message()->get( $id );
-        dd($messages);
-
+        $mail = LaravelGmail::message()->get($id);
+        $messages = LaravelGmail::message()->subject('test')->unread()->preload()->all();
+        $count = strlen($messages);
+        // dd($mail);
+        return view('gmail.mail')->with(compact('mail', 'count'));
     }
 }
