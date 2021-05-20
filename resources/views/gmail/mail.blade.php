@@ -40,7 +40,7 @@
             <a href="#" class="btn btn-danger btn-sm btn-block" role="button">COMPOSE</a>
             <hr />
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#"><span class="badge pull-right">{{$count}}</span> Inbox </a>
+                <li class="active"><a href="{{url('/messages')}}"><span class="badge pull-right">{{$count}}</span> Inbox </a>
                 </li>
                 <li><a style='color:black;' href="http://www.coderglass.com">Starred</a></li>
                 <li><a style='color:black;' href="http://www.coderglass.com">Important</a></li>
@@ -49,7 +49,7 @@
                         <span class="badge pull-right">445</span>Drafts</a></li>
             </ul>
         </div>
-        <div class="col-sm-9 col-md-10">
+        <div class="col-sm-9 col-md-10 mr-auto">
      
             <!-- Tab panes -->
             <div class="tab-content">

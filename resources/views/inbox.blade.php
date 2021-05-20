@@ -91,7 +91,7 @@
             <a href="#" class="btn btn-danger btn-sm btn-block" role="button">COMPOSE</a>
             <hr />
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#"><span class="badge pull-right">{{$count}}</span> Inbox </a>
+                <li class="active"><a href="{{url('/messages')}}"><span class="badge pull-right">{{$count}}</span> Inbox </a>
                 </li>
                 <li><a style='color:black;' href="http://www.coderglass.com">Starred</a></li>
                 <li><a style='color:black;' href="http://www.coderglass.com">Important</a></li>
@@ -135,7 +135,6 @@
 					</span>
                             <span class="badge">{{$msg->getDate()}}</span>
                             <span class="pull-right">
-					<span class="glyphicon glyphicon-paperclip">
                     </span></span>
                         </a>
 
