@@ -21,12 +21,12 @@ use Illuminate\Support\Facades\Route;
 Route::view('/','index');
 
 Route::get('/oauth/gmail', function (){
-    return LaravelGmail::redirect('/user');
+    return LaravelGmail::redirect('/messages');
 });
 
 Route::get('/oauth/gmail/callback', function (){
     LaravelGmail::makeToken();
-    return redirect()->to('/user');
+    return redirect()->to('/messages');
 });
 
 Route::get('/oauth/gmail/logout', function (){

@@ -92,6 +92,7 @@
                       
                     
                         <p class="pp-descp">{!!$mail->getHtmlBody()!!}</p>
+
                 
                     </div>
                 </div>
